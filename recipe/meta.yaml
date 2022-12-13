@@ -1,5 +1,5 @@
 {% set name = "apeye" %}
-{% set version = "1.2.0" %}
+{% set version = "1.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apeye-{{ version }}.tar.gz
-  sha256: 0bb0f5b037730f149d3ab3697bc30ccccd60407cf16218d8ffa8f78462239e1e
+  sha256: 30ac4dcc6eafc28ae2cc6911caef7396c2692a3842e2d77aafe03cdb979eeb3c
 
 build:
   noarch: python
@@ -20,8 +20,8 @@ requirements:
     - pip
     - python >=3.6
   run:
+    - apeye-core >=1.0.0b2
     - domdf-python-tools >=2.6.0
-    - idna >=2.5
     - platformdirs >=2.3.0
     - python >=3.6
     - requests >=2.24.0
